@@ -1,0 +1,31 @@
+# ============================================================
+# حماية لوحة التحكم
+# ============================================================
+
+# منع تصفح المجلدات
+Options -Indexes
+
+# حماية الملفات الحساسة
+<FilesMatch "^(config\.php|database\.sql)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# منع الوصول للملفات المضمنة
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
+
+# حماية إضافية
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# منع الوصول المباشر للملفات
+<FilesMatch "\.(ini|log|sh|sql|bak|config)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

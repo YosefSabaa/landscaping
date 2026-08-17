@@ -1,0 +1,25 @@
+[16-Aug-2026 14:40:52 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+Stack trace:
+#0 {main}
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
+[16-Aug-2026 14:40:55 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+Stack trace:
+#0 {main}
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
+[16-Aug-2026 14:41:14 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+Stack trace:
+#0 {main}
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
+[16-Aug-2026 14:47:40 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+Stack trace:
+#0 {main}
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
+[16-Aug-2026 14:49:39 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:25
+Stack trace:
+#0 {main}
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 25
+[16-Aug-2026 14:49:41 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:25
+Stack trace:
+#0 {main}
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 25
+[16-Aug-2026 14:50:45 Asia/Riyadh] PHP Fatal error:  Cannot redeclare getCount() (previously declared in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\config.php:108) in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\includes\functions.php on line 112
