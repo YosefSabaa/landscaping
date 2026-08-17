@@ -1,30 +1,115 @@
 # ============================================================
-# حماية لوحة التحكم
+# الأرض الطيبة لتنسيق الحدائق - ملف الإعدادات
 # ============================================================
+
+# تفعيل محرك إعادة الكتابة
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # منع الوصول للملفات الحساسة
+    RewriteRule ^config\.php$ - [F,L]
+    RewriteRule ^database\.sql$ - [F,L]
+    
+    # حماية مجلد الإدارة
+    RewriteRule ^admin/includes/ - [F,L]
+    
+    # إعادة توجيه www إلى non-www
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+    
+</IfModule>
 
 # منع تصفح المجلدات
 Options -Indexes
 
-# حماية الملفات الحساسة
-<FilesMatch "^(config\.php|database\.sql)">
+# منع الوصول للملفات الحساسة
+<FilesMatch "^(config\.php|database\.sql|\.env|\.git)">
     Order allow,deny
     Deny from all
 </FilesMatch>
 
-# منع الوصول للملفات المضمنة
+# حماية مجلد الرفعات
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule ^includes/ - [F,L]
+    RewriteRule ^uploads/.*\.(php|phtml|php3|php4|php5|php7|phps)$ - [F,L]
 </IfModule>
 
-# حماية إضافية
+# تفعيل ضغط الملفات
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# تفعيل التخزين المؤقت
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # الصور
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    
+    # CSS و JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 day"
+    
+    # الخطوط
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# إعدادات الأمان الإضافية
 <IfModule mod_headers.c>
+    # منع تحميل الموقع داخل iframe
     Header set X-Frame-Options "SAMEORIGIN"
+    
+    # منع تخمين نوع المحتوى
     Header set X-Content-Type-Options "nosniff"
+    
+    # حماية XSS
     Header set X-XSS-Protection "1; mode=block"
+    
+    # سياسة الإحالة
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # منع التخزين المؤقت للملفات الحساسة
+    <FilesMatch "\.(php)$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate"
+    </FilesMatch>
 </IfModule>
 
-# منع الوصول المباشر للملفات
+# تحديد حجم الرفع
+php_value upload_max_filesize 10M
+php_value post_max_size 12M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+# تعيين المنطقة الزمنية
+php_value date.timezone "Asia/Riyadh"
+
+# تفعيل عرض الأخطاء (للإنتاج)
+php_flag display_errors off
+php_flag log_errors on
+php_value error_log "error.log"
+
+# حماية من هجمات SQL Injection
+<IfModule mod_rewrite.c>
+    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+    RewriteRule ^(.*)$ index.php [F,L]
+</IfModule>
+
+# حماية من الوصول المباشر للملفات
 <FilesMatch "\.(ini|log|sh|sql|bak|config)$">
     Order allow,deny
     Deny from all

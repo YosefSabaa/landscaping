@@ -1,25 +1,18 @@
-[16-Aug-2026 14:40:52 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+[15-Aug-2026 23:28:10 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getServiceIconSVG() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php:98
 Stack trace:
 #0 {main}
-  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
-[16-Aug-2026 14:40:55 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 98
+[15-Aug-2026 23:30:16 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getServiceIconSVG() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php:98
 Stack trace:
 #0 {main}
-  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
-[16-Aug-2026 14:41:14 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 98
+[15-Aug-2026 23:31:59 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getServiceIconSVG() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php:98
 Stack trace:
 #0 {main}
-  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
-[16-Aug-2026 14:47:40 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:19
-Stack trace:
-#0 {main}
-  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 19
-[16-Aug-2026 14:49:39 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:25
-Stack trace:
-#0 {main}
-  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 25
-[16-Aug-2026 14:49:41 Asia/Riyadh] PHP Fatal error:  Uncaught Error: Call to undefined function getUnreadMessagesCount() in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php:25
-Stack trace:
-#0 {main}
-  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\admin\dashboard.php on line 25
-[16-Aug-2026 14:50:45 Asia/Riyadh] PHP Fatal error:  Cannot redeclare getCount() (previously declared in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\config.php:108) in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\includes\functions.php on line 112
+  thrown in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 98
+[17-Aug-2026 22:03:45 Asia/Riyadh] PHP Warning:  include(F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\includes\header.php): Failed to open stream: No such file or directory in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 48
+[17-Aug-2026 22:03:45 Asia/Riyadh] PHP Warning:  include(): Failed opening 'includes/header.php' for inclusion (include_path='F:\Local Host\XAMPP\php\PEAR') in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 48
+[17-Aug-2026 22:03:57 Asia/Riyadh] PHP Warning:  include(F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\includes\header.php): Failed to open stream: No such file or directory in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 48
+[17-Aug-2026 22:03:57 Asia/Riyadh] PHP Warning:  include(): Failed opening 'includes/header.php' for inclusion (include_path='F:\Local Host\XAMPP\php\PEAR') in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 48
+[17-Aug-2026 22:04:19 Asia/Riyadh] PHP Warning:  include(includes/header.php): Failed to open stream: No such file or directory in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 48
+[17-Aug-2026 22:04:19 Asia/Riyadh] PHP Warning:  include(): Failed opening 'includes/header.php' for inclusion (include_path='F:\Local Host\XAMPP\php\PEAR') in F:\Local Host\XAMPP\htdocs-library\Client\landscaping\v2\index.php on line 48

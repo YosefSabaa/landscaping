@@ -1,0 +1,69 @@
+# ============================================================
+# Git Ignore File - الأرض الطيبة لتنسيق الحدائق
+# ============================================================
+
+# ملفات الإعدادات الحساسة
+config.php
+.env
+.env.local
+.env.production
+
+# ملفات قاعدة البيانات
+database.sql
+*.sql
+
+# ملفات السجلات
+*.log
+error.log
+access.log
+
+# مجلدات النظام
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ملفات IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ملفات التخزين المؤقت
+cache/
+temp/
+tmp/
+
+# ملفات الرفع (الصور المرفوعة)
+uploads/gallery/*
+uploads/temp/*
+!uploads/gallery/.gitkeep
+!uploads/temp/.gitkeep
+
+# ملفات النسخ الاحتياطي
+backup/
+*.bak
+*.backup
+
+# ملفات الضغط
+*.zip
+*.tar
+*.gz
+*.rar
+
+# ملفات Node.js (إذا تم استخدامها)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# ملفات Composer (إذا تم استخدامها)
+vendor/
+composer.lock
+
+# ملفات WordPress (إذا تم استخدامها)
+wp-config.php
+wp-content/uploads/
+
+# ملفات مؤقتة
+*.tmp
+*.temp
+~$*

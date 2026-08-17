@@ -1,0 +1,31 @@
+# ============================================================
+# robots.txt - الأرض الطيبة لتنسيق الحدائق
+# ============================================================
+
+# السماح لجميع محركات البحث
+User-agent: *
+Allow: /
+
+# منع الوصول للمجلدات الحساسة
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /uploads/temp/
+
+# منع الوصول للملفات الحساسة
+Disallow: /config.php
+Disallow: /database.sql
+Disallow: /error.log
+Disallow: /.git/
+Disallow: /README.md
+
+# منع محركات بحث محددة (اختياري)
+# User-agent: Baiduspider
+# Disallow: /
+
+# رابط خريطة الموقع
+Sitemap: http://scientific-center.local/landscaping/v2/sitemap.php
+
+# Crawl-delay (اختياري - بالثواني)
+# Crawl-delay: 10
